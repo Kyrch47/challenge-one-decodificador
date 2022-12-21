@@ -77,6 +77,12 @@ button {
     margin-right: 24px;
 }
 
+#button-filled:hover {
+    transition: .1s;
+    background-color: #052051;
+    border: 1px solid #052051;
+}
+
 #button-empty {
     background-color: #F3F5FC;
     color: #0A3871;
@@ -84,13 +90,14 @@ button {
 }
 
 .messages-container {
+    max-width: 340px;
     display: flex;
     flex-direction: column;
-    flex: 0.33;
+    justify-content: center;
     background-color: white;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-    padding: 11% 32px 32px 32px;
+    padding: 32px 32px 32px 32px;
     text-align: center;
 }
 
@@ -107,14 +114,56 @@ button {
     line-height: 24px;
 }
 
-#button-white {
+#message-not-found {
+    display: block;
+}
+
+#message-found {
+    flex: 1;
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+#message-found  p {
+    margin-top: 0px;
+    flex: 1;
+    text-align: left;
+    font-size: 24px;
+    color: #495057;
+    line-height: 36px;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+#button-white {
     margin-top: auto;
     background-color: white;
     color: #0A3871;
+    width: 340px;
+}
+
+#button-white:hover, #button-empty:hover {
+    transition: .1s;
+    background-color: #0A3871;
+    color: white;
 }
 
 footer {
     text-align: center;
     font-size: 13px;
+    background-color: #0A3871 ;
+}
+
+footer p {
+    margin: 0px;
+    padding: 10px;
+    color: white;
+}
+
+.github-vector svg {
+    height: 20px;
+    vertical-align: middle;
+    padding-left: 10px;
 }
