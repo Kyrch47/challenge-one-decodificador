@@ -1,2 +1,2 @@
-# challenge-one-decodificador
-Challenge ONE | Primeiro desafio para o programa Oracle ONE
+# Challenge ONE - Sprint 01: Decodificador
+Construir um decodificador de texto com Javascript
