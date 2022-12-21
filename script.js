@@ -45,3 +45,7 @@ function changeMessage(text = "") {
         haveMessage.style.display = "flex";
     }
 }
+
+function copyText() {
+    navigator.clipboard.writeText(outputText.innerHTML);
+}
