@@ -23,7 +23,9 @@ function encryptText() {
         }
     }
 
-    changeMessage(cryptText);
+    var active = true;
+
+    changeMessage(cryptText, active);
 }
 
 function decryptText() {
@@ -31,15 +33,17 @@ function decryptText() {
 
     var decryptText = text.replaceAll("ai", "a").replaceAll("enter", "e").replaceAll("imes", "i").replaceAll("ober", "o").replaceAll("ufat", "u");
 
-    changeMessage(decryptText);
+    var active = true;
+
+    changeMessage(decryptText, active);
 }
 
-function changeMessage(text = "") {
+function changeMessage(text = "", active = false) {
     if (textArea.value == "") {
         noMessage.style.display = "block";
         haveMessage.style.display = "none";
-    } else {
-        outputText.innerHTML = text
+    } else if (active !== false) {
+        outputText.innerHTML = text;
     
         noMessage.style.display = "none";
         haveMessage.style.display = "flex";

@@ -7,7 +7,7 @@ body {
 }
 
 main {
-    padding: 40px;
+    padding: 40px 40px;
     height: calc( 100vh - 80px);
     display: flex;
     justify-content: flex-end;
@@ -25,13 +25,13 @@ button {
 
 .alura-vector {
     position: absolute;
-    left: 84px;
-    top: 40px;
+    left: 4.4%;
+    top: 4.3%;
 }
 
 .decoder-container {
     width: 100%;
-    padding: 128px 0px 0px 200px;
+    padding: 10% 0px 0px 14%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -76,6 +76,7 @@ button {
     color: white;
     width: 326px;
     margin-right: 24px;
+    margin-bottom: 24px;
 }
 
 #button-filled:hover {
@@ -88,6 +89,7 @@ button {
     background-color: #F3F5FC;
     color: #0A3871;
     width: 326px;
+
 }
 
 .messages-container {
@@ -168,3 +170,50 @@ footer p {
     vertical-align: middle;
     padding-left: 10px;
 }
+
+@media (max-width: 940px) {
+    main {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0px;
+    }
+    .decoder-container {
+        padding: 170px 0px 40px 0px;
+        flex: 1;
+    }
+
+    .messages-container {
+        max-width: none;
+    }
+    #output-text {
+        max-height: 180px;
+    }
+    #button-white {
+        margin-top: 32px;
+        width: auto;
+    }
+    .messages-container h3{
+        margin: 0px;
+    }
+    .messages-container p {
+        margin-bottom: 0px;
+    }
+    .message-vector {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    main {
+        padding: 16px 16px 40px ;
+    }
+    .decoder-container {
+        padding: 160px 0px 40px 0px;
+        flex: 1;
+    }
+    #button-filled, #button-empty {
+        margin-right: 0px;
+        width: 100%;
+    }
+}
+
